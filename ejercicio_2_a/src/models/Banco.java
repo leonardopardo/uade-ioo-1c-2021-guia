@@ -61,13 +61,7 @@ public class Banco {
      */
     public void altaCajaAhorro(Moneda moneda, Integer dniCliente) throws Exception{
 
-        //Cliente cliente = this.buscarCliente(dniCliente); // Objeto Cliente
-
-        Cliente cliente = null;
-
-        for (Cliente cli: this.clientes) {
-            if(cliente.getDocumento().equals(dniCliente)) cliente = cli;
-        }
+        Cliente cliente = this.buscarCliente(dniCliente); // Objeto Cliente
 
         if(cliente == null)
             throw new Exception(CLIENTE_INEXISTENTE_EXCEPTION); // si se ejecuta esto, el código termió acá !!!
